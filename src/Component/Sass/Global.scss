@@ -1,0 +1,350 @@
+@import 'Variables';
+@import 'Mixins';
+
+body{
+
+    background-color: $light-bg !important;
+}
+
+// Discount Deal Css Start
+
+.electron-promotion-bar {
+    background: -webkit-linear-gradient(0deg, #000fe8 0%, #e80027 50%);
+  }
+  
+  .inner {
+    position: relative;
+    min-height: 30px;
+    max-width: 1420px;
+    padding: 5px 20px;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 12px;
+    color: #fff;
+    transition: height 0.5s, padding 0.5s;
+    background: none;
+  }
+  
+  .panel-close {
+    border-radius: 5px;
+    background-color: $primary-color; // Replace with your color or use a specific color value
+    color: white;
+    width: 25px;
+    height: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    right: 0px;
+    top: 3px;
+    cursor: pointer;
+    z-index: 5;
+
+    &:before{
+        transform: rotate(135deg);
+    }
+     &:after {
+      transform: rotate(45deg);
+    }
+    &:before,
+    &:after {
+      content: '';
+      position: absolute;
+      height: 2px;
+      width: 9px;
+      top: 39%;
+      left: auto;
+      transform-origin: 50% 50%;
+      background-color: white;
+      opacity: 1;
+      transition: transform ease 0.25s;
+     
+    }
+
+     &:hover {
+      &:after
+       {
+      transform: rotate(0deg);
+    }
+    &:before{
+      transform: rotate(0deg);
+    }
+       
+  } 
+   
+  
+    
+  }
+// Discount Deal Css End
+
+
+//Navbar container css Start
+.offer-navbar{
+    border: 1px solid #80808047;
+}
+
+.header-offer-container{
+    color:white;
+    background-color: $primary-color;
+    font-size: 12px;
+    padding: 6px 35px;
+    border-radius: 4px;
+
+    .background-note{
+        padding-right: 10px;    
+    }
+
+}
+
+.upper-navbar-title {
+    font-size: 10px;
+    text-transform: uppercase;
+    cursor: pointer;
+
+    .upper-navbar-dropdown {
+        display: block;
+        font-size: 10px;
+    }
+    .social-contact-icon-wrapper{
+        flex-grow: 0.1 !important;
+    }
+}
+//Navbar container css End
+
+
+// Live Deals Container Css Start
+
+.live-deals-wrapper {
+    position: relative;
+    margin: 20px 0 0px;
+    background-color: white !important;
+  
+    .dot-container{
+        border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+        & h2{
+            margin-left: 20px;
+        }
+    }
+    
+  
+    .dot {
+      border: 10px solid #14bf14;
+      border-radius: 60px;
+      height: 25px;
+      width: 25px !important;
+      background: transparent;
+      animation: pulse 2s ease-out;
+      animation-iteration-count: infinite;
+      z-index: 1;
+      opacity: 0;
+    }
+    
+    .pulse {
+        width: 5px !important;
+        height: 5px;
+        border: 5px solid #14bf14;
+        border-radius: 15px;
+        background-color: green;
+        padding: 4px;
+        position: absolute;
+        left: 13px;
+        top: 10px;
+        
+        &::before,
+        &::after {
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background-color: green;
+            border-radius: 50%;
+            z-index: 0;
+            opacity: 0.7;
+            position: absolute;
+            left: 0px;
+            top: 0px;
+        }
+        
+        &::before {
+            animation: pulse 2s ease-out infinite;
+        }
+        
+        &::after {
+            animation: pulse 2s ease-out infinite;
+        }
+    }
+    
+    @keyframes pulse {
+        100% {
+            transform: scale(3);
+            opacity: -0.2;
+        }
+    }
+}
+.deals-list-wrapper{
+    padding: 10px 5px;
+    max-height: 250px;
+    overflow-y: scroll;
+    scroll-behavior: smooth;
+
+     &::-webkit-scrollbar {
+        width: 8px; // width of the scrollbar
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background-color: $primary-color; // color of the thumb
+        border-radius: 4px; // roundness of the thumb
+    }
+
+    &::-webkit-scrollbar-track {
+        background-color: #f1f1f1; // color of the track
+    }
+
+    &::-webkit-scrollbar-thumb:hover {
+        cursor: pointer;
+    }
+}
+
+.live-deal-wrapper{
+    .product{
+        flex-flow: row;
+        gap: 0 20px;
+        h3{
+            font-size: 20px;
+            
+        }
+        img{
+            width: 70px;
+            height: 70px;
+        }
+        .discounted-price {
+            color: $special-font;
+            margin-left: 20px;
+        }
+    }
+   
+}
+
+// Live Deals Container Css End
+
+/* *************** Intro Tag Start ********** */
+    .intro-tag-box {
+        margin: 30px 0;
+        
+    h1 {
+        position: relative;
+        font-size: 22px;
+        text-transform: capitalize;
+        text-align: center;
+        border: 1px solid #d5d5d5;
+        padding: 10px 40px;
+        border-radius: 6px;
+        letter-spacing: 0.4px;
+
+        &::before,
+        &::after {
+        content: '';
+        display: block;
+        width: 174px;
+        height: 1px;
+        background: #d5d5d5;
+        position: absolute;
+        top: 50%;
+        }
+
+        &::before {
+        left: -175px;
+        }
+
+        &::after {
+        right: -175px;
+        }
+    }
+    }
+          
+
+/* *************** Intro Tag End ********** */
+.best-seller-data,.best-rated-data{
+
+    .product-list{
+        justify-content: space-between;
+    }
+    .product{
+        flex-direction: column;
+        background-color: white;
+        border: 1px solid $special-font;
+        padding: 20px;
+        margin-right: 10px;
+        h3{
+            font-size: 14px;
+        }
+        img{
+            width: 150px;
+        height: 150px;
+        }
+    }
+}
+.best-online-deal{
+    margin-bottom: 50px;
+}
+
+.best-deal-products{
+    width: 100%;
+    z-index: 3;
+    padding:18px 20px 0;
+    text-align: left;
+    border-radius: 10px;
+    img{
+        width: 220px;
+        height: 240px;
+
+    }
+}
+.slick-prev, .slick-next {
+    font-size: 0;
+    line-height: 0;
+    position: absolute;
+    top: 50%;
+    display: block;
+    width: 20px;
+    height: 20px;
+    padding: 0;
+    transform: translate(0, -50%);
+    cursor: pointer;
+    color: transparent;
+    border: none;
+    outline: none;
+    background: transparent;
+    z-index: 1;
+}
+.slick-prev:before, .slick-next:before {
+    position: absolute;
+    font-family: 'slick';
+    font-size: 20px;
+    line-height: 1;
+    opacity: .75;
+    color: white;
+    background-color: $primary-color;
+    -webkit-font-smoothing: antialiased;
+    padding: 8px;
+    -moz-osx-font-smoothing: grayscale;
+    z-index: 1;
+    border-radius: 4px;
+    
+}
+.slick-prev:before{
+    left: 25px;
+}
+.slick-next:before {
+    left: -50px;
+}
+
+
+
+// Footer Css Start
+.footer-wrapper{
+    margin: 30px 0;
+    padding: 50px 0;
+}
+
+// Footer Css End

@@ -1,0 +1,54 @@
+@mixin flexRow {
+    display: flex;
+    flex-direction: row;
+  }
+  
+  @mixin flexColumn {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .row-flex-wrapper {
+    @include flexColumn(); 
+    ul {
+      @include flexColumn(); 
+    }
+  
+    li {
+      @include flexRow(); 
+    }
+  }
+  
+  .column-flex-wrapper {
+    @include flexColumn();
+  
+    ul {
+      @include flexRow(); 
+    }
+  
+    li {
+      @include flexColumn(); 
+    }
+  }
+  .all-column-flex-wrapper{
+    @include flexColumn();
+  
+    ul {
+      @include flexColumn(); 
+    }
+  
+    li {
+      @include flexColumn(); 
+    }
+  }
+  .all-column-flex-wrapper{
+    @include flexRow();
+  
+    ul {
+      @include flexRow(); 
+    }
+  
+    li {
+      @include flexRow(); 
+    }
+  }

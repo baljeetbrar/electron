@@ -1,0 +1,43 @@
+//Main Navbar Css Start
+@media screen and (min-width: 567px) and (max-width: 767px) {
+    .deal-nav-link{
+        font-size: 14px;
+    }
+    .best-deal-products{
+        margin: 20px 0;
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 991px) {
+    .deal-nav-link{
+        font-size: 14px !important;
+    }
+    .live-deals-details{
+        font-size: 14px;
+    }
+    .best-deal-products{
+        margin: 20px 0;
+    }
+}
+
+@media screen and (min-width: 992px) and (max-width: 1199px) {
+    .best-deal-products{
+        padding:18px 15px 0;
+        img{
+            width: 190px;
+            height: 220px;
+        }
+    } 
+}
+@media screen and (min-width: 1200px)  {
+    
+}
+
+//Main Navbar Css End
+
+
+
+
+
+
+
