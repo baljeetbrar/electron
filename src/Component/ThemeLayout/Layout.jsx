@@ -1,5 +1,5 @@
 import React from 'react';
-import { Routes,Route} from 'react-router-dom';
+import { Routes,Route, BrowserRouter} from 'react-router-dom';
 import NavbarLink from '../Navbar/NavbarLink'
 import Home from '../Pages/Home';
 import Contact from '../Pages/Contact';
@@ -11,7 +11,8 @@ import Error from '../Pages/Error';
 const Layout = () => {
 return(
     <>
-       <div className="theme-layout">          
+       <div className="theme-layout"> 
+       <BrowserRouter>
                 <NavbarLink />
             <Routes>
                 <Route path='/' element={<Home /> } />
@@ -21,8 +22,8 @@ return(
 
                 <Route path='*' element={<Error />} />
             </Routes>
-            <Footer />
-            
+       </BrowserRouter>         
+            <Footer />     
        </div>
     </>
 )

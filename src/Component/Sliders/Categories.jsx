@@ -124,6 +124,7 @@ const Categories = () => {
             <Slider  {...sliderSettingBestRated} >
               {bestRatedData.map((product)=>(
                 <Product
+                  key={product.id}
                   product={product} 
                   products={bestRatedData} 
                   showOriginalPrice={true} 
