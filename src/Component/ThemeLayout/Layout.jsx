@@ -1,5 +1,5 @@
 import React from 'react';
-import { Routes,Route, BrowserRouter} from 'react-router-dom';
+import { Routes,Route, HashRouter} from 'react-router-dom';
 import NavbarLink from '../Navbar/NavbarLink'
 import Home from '../Pages/Home';
 import Contact from '../Pages/Contact';
@@ -12,7 +12,7 @@ const Layout = () => {
 return(
     <>
        <div className="theme-layout"> 
-       <BrowserRouter>
+       <HashRouter>
                 <NavbarLink />
             <Routes>
                 <Route index path='/' element={<Home /> } />
@@ -22,7 +22,7 @@ return(
 
                 {/* <Route path='*' element={<Error />} /> */}
             </Routes>
-       </BrowserRouter>         
+       </HashRouter>         
             <Footer />     
        </div>
     </>
