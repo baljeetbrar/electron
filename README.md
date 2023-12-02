@@ -42,12 +42,11 @@ Welcome to the Electronic E-Commerce Platform! This React-based e-commerce proje
 - **src/utils:** Houses utility functions and helper methods.
 - **public:** Static assets and the project's HTML file.
 
-## Getting Started
+## Get in Touch
 
-1. Clone the repository: `git clone https://github.com/your-username/electronic-e-commerce.git`
-2. Install dependencies: `npm install`
-3. Run the development server: `npm start`
+If you have any questions or suggestions, feel free to reach out:
 
+- Email: Baljeetbrar1@outlook.com
 
 
 
